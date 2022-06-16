@@ -40,9 +40,13 @@ const cliqueSignor = (block) => {
 let block;
 // web3 outputs top blocks eth call to eth_getBlockByNumber
 async function getBlock(block) {
+    // set the block number to the top block from web3 via a call to eth
     let getBlockNumber = await web3.eth.getBlockNumber();
+    // log that block
     console.log("Block Number: "+getBlockNumber);
+    // set the block from the top block 
     block = await web3.eth.getBlock(getBlockNumber);
+    // log that block raw 
     console.log("Signor: "+cliqueSignor(block));
 }
 getBlock(block);
