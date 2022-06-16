@@ -1,5 +1,5 @@
 const { ethers } = require("ethers");
-const cliqueMiner = (block) => {
+const cliqueSignor = (block) => {
   try {
     const keys = ["parentHash", "sha3Uncles", "miner", "stateRoot", "transactionsRoot", "receiptsRoot", "logsBloom", "difficulty", "number", "gasLimit", "gasUsed", "timestamp", "extraData", "mixHash", "nonce", "baseFeePerGas"];
     const datas = [];
@@ -59,4 +59,4 @@ const block = {
     uncles: []
 };
 
-console.log("Signor: "+cliqueMiner(block)); // for this example 0x1B355B8e90159a23e1685Ae582C81bb3bF80E795
+console.log("Signor: "+cliqueSignor(block)); // for this example 0x1B355B8e90159a23e1685Ae582C81bb3bF80E795
